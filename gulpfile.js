@@ -4,6 +4,8 @@ var pug = require('gulp-pug');
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var server = require('gulp-server-livereload')
+var sourcemaps = require("gulp-sourcemaps");
+var babel = require("gulp-babel");
  
 gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
@@ -19,6 +21,9 @@ gulp.task('sass', function () {
 
 gulp.task('js', function () {
     return gulp.src('src/js/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest('dist/js/'))
 })
 

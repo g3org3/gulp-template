@@ -1,2 +1,8 @@
+'use strict';
 
-console.log("hola mundo");
+(function () {
+
+    const a = () => console.log("hola mundo!");
+    a();
+
+}())
