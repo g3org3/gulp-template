@@ -1,5 +1,5 @@
 # gulp-template
-develop a website look and feel with gulp + livereload + sass + pug
+Develop a website's look and feel with gulp + livereload + sass + pug
 
 ## Usage
 ```sh
