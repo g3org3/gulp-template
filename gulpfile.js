@@ -6,12 +6,22 @@ var sass = require('gulp-sass');
 var server = require('gulp-server-livereload')
 var sourcemaps = require("gulp-sourcemaps");
 var babel = require("gulp-babel");
- 
+
 gulp.task('views', function buildHTML() {
   return gulp.src('src/views/*.pug')
   .pipe(pug({}))
   .pipe(gulp.dest('dist/'))
 });
+
+gulp.task('copy:images', function () {
+  return gulp.src('src/images/*')
+  .pipe(gulp.dest('dist/images/'))
+})
+
+gulp.task('copy:libs', function () {
+  return gulp.src('src/libs')
+  .pipe(gulp.dest('dist/'))
+})
 
 gulp.task('sass', function () {
   return gulp.src('src/styles/*.sass')

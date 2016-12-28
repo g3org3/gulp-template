@@ -1,0 +1,12 @@
+src
+node_modules
+.babelrc
+.bowerrc
+.gitignore
+bower.json
+gulpfile.js
+LICENSE
+*.log
+*.js
+package.json
+*.md
